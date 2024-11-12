@@ -137,7 +137,7 @@ fi
 
 dl_adg() {
 logger -t "AdGuardHome" "下载AdGuardHome"
-curl -k -s -o /tmp/AdGuardHome/AdGuardHome --connect-timeout 10 --retry 3 ftp://192.168.1.1/AiDisk_a1/adguard/AdGuardHome
+curl -k -s -o /tmp/AdGuardHome/AdGuardHome --connect-timeout 10 --retry 3 https://github.com/mengke10086/padavan-4.4/blob/main/trunk/user/AdGuardHome
 if [ ! -f "/tmp/AdGuardHome/AdGuardHome" ]; then
 logger -t "AdGuardHome" "AdGuardHome下载失败，请检查是否能正常访问github!程序将退出。"
 nvram set adg_enable=0
